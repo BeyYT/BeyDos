@@ -41,7 +41,7 @@ else:
 if args.port:
     print("Set target port to %s" % args.port)
 else:
-    args.port = 25565
+    args.port = 80
 
 if args.mask:
     print("Set mask to %s" % args.mask)
