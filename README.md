@@ -23,4 +23,4 @@ HOW TO USE:
 
 How To Install Tutorial:
 
-# soon
+# Coming Soon
