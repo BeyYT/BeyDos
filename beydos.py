@@ -48,8 +48,6 @@ else:
 if args.mask:
     print("Set mask to %s" % args.mask)
     mask = args.mask
-else:
-    mask: "192.168.1.89"
     
 if args.http:
     print("Set attack to http")
