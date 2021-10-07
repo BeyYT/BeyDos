@@ -10,13 +10,13 @@ argument_list = full_cmd_arguments[1:]
 #Add Variables
 parser = argparse.ArgumentParser() 
 
-parser.add_argument("--ipv4", "-ip", help="Set Target IP ")
+parser.add_argument("--ipv4", "-i", help="Set Target IP ")
 
 parser.add_argument("--port", "-p", help="Set Target Port ")
 
-parser.add_argument("--mask", "-mip", help="Set Mask IP ")
+parser.add_argument("--mask", "-m", help="Set Mask IP ")
 
-parser.add_argument("--http", "-htp", help="Set Attack Method to HTTP")
+parser.add_argument("--http", "-h", help="Set Attack Method to HTTP")
 
 args = parser.parse_args()
 
