@@ -11,16 +11,6 @@ UDP: Great For Testing Minecraft Servers, Floods 1024 Bytes Of Data.
 
 HTTP GET: Great For Testing Websites, Floods HTTP Get Requests
 
-### How to use:
-
--i --ipv4: The IP You Want To Attack, Necessary for the script to work
-
--p --port: the port for the IP, if left blank, defaults to 80.
-
--m --mask: masks IP, use if you want a masked attack.
-
--h --HTTP: enables HTTP attack, needs argument like the rest of these
-
 ### How To Install Tutorial:
 
 download this repo, extract it, and cd to it.
@@ -32,8 +22,19 @@ pip3 install -r requirements.txt
 ```
 afterwards, when it is done, do this.
 ```
-python beydos.py -p (port) -i (ip/address)
+python beydos.py -p (port) -i (ip/website)
 or
-python3 beydos.py -p (port) -i (ip/address)
+python3 beydos.py -p (port) -i (ip/website)
 ```
 > make sure to not include (port) or (ip/adress), replace them with the port and ip  that you wish to test.
+
+### Parameters (some optional):
+
+-i --ipv4: The IP / Website You Want To Attack, Necessary for the script to work
+
+-p --port: the port for the IP, if left blank, defaults to 80.
+
+-m --mask: (optional), masks IP, use if you want a masked attack.
+
+-h --HTTP: (optional), enables HTTP attack, needs argument like the rest of these
+
