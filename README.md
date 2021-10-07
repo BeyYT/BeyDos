@@ -11,7 +11,7 @@ UDP: Great For Testing Minecraft Servers, Floods 1024 Bytes Of Data.
 
 HTTP GET: Great For Testing Websites, Floods HTTP Get Requests
 
-## HOW TO USE:
+### How to use:
 
 -i --ipv4: The IP You Want To Attack, Necessary for the script to work
 
@@ -21,7 +21,7 @@ HTTP GET: Great For Testing Websites, Floods HTTP Get Requests
 
 -h --HTTP: enables HTTP attack, needs argument like the rest of these
 
-## How To Install Tutorial:
+### How To Install Tutorial:
 
 download this repo, extract it, and cd to it.
 then, do this command:
