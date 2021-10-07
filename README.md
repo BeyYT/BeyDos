@@ -11,7 +11,7 @@ UDP: Great For Testing Minecraft Servers, Floods 1024 Bytes Of Data.
 
 HTTP GET: Great For Testing Websites, Floods HTTP Get Requests
 
-HOW TO USE:
+# HOW TO USE:
 
 -i --ipv4: The IP You Want To Attack, Nessesary for the script to work
 
