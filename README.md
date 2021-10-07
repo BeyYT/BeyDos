@@ -28,7 +28,7 @@ python3 beydos.py -p (port) -i (ip/website)
 ```
 > make sure to not include (port) or (ip/adress), replace them with the port and ip  that you wish to test.
 
-### Parameters (some optional):
+### Parameters:
 
 -i --ipv4: The IP / Website You Want To Attack, Necessary for the script to work
 
