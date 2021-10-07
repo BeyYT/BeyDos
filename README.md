@@ -23,5 +23,17 @@ HOW TO USE:
 
 How To Install Tutorial:
 
-# Coming Soon
-z
+download this repo, extract it, and cd to it.
+then, do this command:
+```
+pip install -r requirements.txt 
+or
+pip3 install -r requirements.txt
+```
+afterwards, when it is done, do this.
+```
+python beydos.py -p (port) -i (ip/address)
+or
+python3 beydos.py -p (port) -i (ip/address)
+```
+> make sure to not include (port) or (ip/adress), replace them with the port and ip  that you wish to test.
