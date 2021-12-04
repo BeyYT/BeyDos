@@ -1,5 +1,5 @@
 #Import Modules
-import getopt, sys, os, time, argparse, socket, threading, string, random
+import sys, os, time, argparse, socket, threading, string, random
 
 #Get full command arguments
 full_cmd_arguments = sys.argv
